@@ -84,12 +84,11 @@ jobs:
           then
               GIB_ARGS+=" -Dgib.referenceBranch=$PULL_REQUEST_BASE"
           else
-              # -Dgib.referenceBranch=refs/heads/master
-              GIB_ARGS+=" -Dgib.referenceBranch=refs/remotes/origin/gib-3 -Dgib.disableIfBranchRegex='master|\d\.\d|.*backport.*'"
+              # -Dgib.referenceBranch=refs/remotes/origin/gib-3
+              GIB_ARGS+=" -Dgib.referenceBranch=origin/master -Dgib.disableIfBranchRegex='master|\d\.\d|.*backport.*'"
           fi
           echo "GIB_ARGS: $GIB_ARGS"
           echo "::set-output name=gib_args::${GIB_ARGS}"
-          # echo "GIB_ARGS='$GIB_ARGS'" >> $GITHUB_ENV
       - name: Cache Maven Repository
         id: cache-maven
         uses: actions/cache@v2
