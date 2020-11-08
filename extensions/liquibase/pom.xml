@@ -15,7 +15,7 @@
     <name>Quarkus - Liquibase</name>
     <packaging>pom</packaging>
     <modules>
-        <module>runtime</module>
+	    <module>runtime</module> <!-- foo -->
         <module>deployment</module>
     </modules>
 </project>
