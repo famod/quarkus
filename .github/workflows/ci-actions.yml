@@ -85,7 +85,7 @@ jobs:
               GIB_ARGS+=" -Dgib.referenceBranch=$PULL_REQUEST_BASE"
           else
               # -Dgib.referenceBranch=refs/remotes/origin/gib-3
-              GIB_ARGS+=" -Dgib.referenceBranch=origin/master -Dgib.disableIfBranchRegex='master|\d\.\d|.*backport.*'"
+              GIB_ARGS+=" -Dgib.referenceBranch=refs/remotes/origin/master -Dgib.fetchReferenceBranch=true -Dgib.disableIfBranchRegex='master|\d\.\d|.*backport.*'"
           fi
           echo "GIB_ARGS: $GIB_ARGS"
           echo "::set-output name=gib_args::${GIB_ARGS}"
