@@ -674,7 +674,6 @@ jobs:
         env:
           CATEGORY: ${{matrix.category}}
         run: |
-          IFS=,
           mvn -pl integration-tests -amd -P$CATEGORY $NATIVE_TEST_MAVEN_OPTS ${{ needs.build-jdk11.outputs.gib_args }}
           # add the 'simple with spaces' project to the run of 'Misc1' by executing it explicitly
           # done because there is no good way to pass strings with empty values to the previous command
