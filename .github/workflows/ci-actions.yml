@@ -84,8 +84,8 @@ jobs:
           then
               GIB_ARGS+=" -Dgib.referenceBranch=$PULL_REQUEST_BASE"
           else
-              # -Dgib.referenceBranch=refs/remotes/origin/gib-3 -Dgib.fetchReferenceBranch=true
-              GIB_ARGS+=" -Dgib.referenceBranch=refs/remotes/quarkusio/master -Dgib.disableIfBranchRegex='master|\d\.\d|.*backport.*'"
+              # -Dgib.referenceBranch=refs/remotes/origin/gib-3
+              GIB_ARGS+=" -Dgib.referenceBranch=refs/remotes/quarkusio/master -Dgib.fetchReferenceBranch=true -Dgib.disableIfBranchRegex='master|\d\.\d|.*backport.*'"
           fi
           echo "GIB_ARGS: $GIB_ARGS"
           echo "::set-output name=gib_args::${GIB_ARGS}"
@@ -149,9 +149,10 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Fetch quarkusio master
+      - name: Add quarkusio remote
         shell: bash
-        run: git fetch git@github.com:quarkusio/quarkus.git master:quarkusio/master
+        run: git remote add quarkusio https://github.com/quarkusio/quarkus.git
+        # run: git fetch git@github.com:quarkusio/quarkus.git master:quarkusio/master
 
       - name: apt clean
         shell: bash
