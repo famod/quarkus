@@ -106,7 +106,7 @@ jobs:
           then
               GIB_ARGS+=" -Dgib.referenceBranch=$PULL_REQUEST_BASE"
           else
-              GIB_ARGS+=" -Dgib.referenceBranch=refs/remotes/quarkusio/master -Dgib.fetchReferenceBranch=true -Dgib.disableIfBranchRegex='master|\d\.\d|.*backport.*'"
+              GIB_ARGS+=" -Dgib.referenceBranch=refs/remotes/origin/gib-3-temp -Dgib.fetchReferenceBranch=true -Dgib.disableIfBranchRegex='master|\d\.\d|.*backport.*'"
           fi
           echo "GIB_ARGS: $GIB_ARGS"
           echo "::set-output name=gib_args::${GIB_ARGS}"
