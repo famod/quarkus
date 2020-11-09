@@ -124,20 +124,20 @@ jobs:
       fail-fast: false
       matrix:
         java :
-          - { name: "8",
-              java-version: 8,
-              maven_args: "-pl !integration-tests/kubernetes/quarkus-standard-way"
-          }
+#          - { name: "8",
+#              java-version: 8,
+#              maven_args: "-pl !integration-tests/kubernetes/quarkus-standard-way"
+#          }
           - {
             name: "11",
             java-version: 11,
             maven_args: ""
           }
-          - {
-            name: "15",
-            java-version: 15,
-            maven_args: "-pl !integration-tests/kubernetes/quarkus-standard-way"
-          }
+#          - {
+#            name: "15",
+#            java-version: 15,
+#            maven_args: "-pl !integration-tests/kubernetes/quarkus-standard-way"
+#          }
 
     steps:
       - name: Stop mysql
