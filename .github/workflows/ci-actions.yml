@@ -83,7 +83,7 @@ jobs:
           key: q2maven-${{ steps.get-date.outputs.date }}
       - name: Build
         run: |
-          mvn -e -B -DskipTests -DskipITs -Dno-format clean install
+          mvn -T1C -e -B -DskipTests -DskipITs -Dinvoker.skip -Dno-format clean install
       - name: Tar Maven Repo
         shell: bash
         run: tar -czf maven-repo.tgz -C ~ .m2/repository
