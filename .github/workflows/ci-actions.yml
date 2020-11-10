@@ -84,12 +84,12 @@ jobs:
       - name: Build
         run: |
           mvn -T1C -e -B -DskipTests -DskipITs -Dinvoker.skip -Dno-format clean install
-      - name: Install pxz
-        shell: bash
-        run: sudo apt-get install pxz
+#      - name: Install pxz
+#        shell: bash
+#        run: sudo apt-get install pxz
       - name: Tar Maven Repo
         shell: bash
-        run: tar -I 'pxz -9' -cf maven-repo.tar.xz -C ~ .m2/repository
+        run: XZ_OPT='--threads=0' tar -cJf maven-repo.tar.xz -C ~ .m2/repository
       - name: Persist Maven Repo
         uses: actions/upload-artifact@v1
         with:
