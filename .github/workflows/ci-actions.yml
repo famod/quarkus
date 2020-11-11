@@ -89,7 +89,9 @@ jobs:
 #        run: sudo apt-get install pxz
       - name: Tar Maven Repo
         shell: bash
-        run: XZ_OPT='--threads=0' tar -cJf maven-repo.tar.xz -C ~ .m2/repository
+        run: |
+          xz --version
+          XZ_OPT='--threads=0 -1' tar -cJf maven-repo.tar.xz -C ~ .m2/repository
       - name: Persist Maven Repo
         uses: actions/upload-artifact@v1
         with:
