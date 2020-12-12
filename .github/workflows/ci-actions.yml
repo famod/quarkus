@@ -120,9 +120,8 @@ jobs:
           # Common GIB_ARGS for all CI cases (hint: see also pom.xml):
           # - disableSelectedProjectsHandling: required to detect changes in jobs that use -pl
           # - untracked: to ignore files created by jobs (and uncommitted to be consistent)
-          # - forces build of quarkus-core.* (see https://github.com/quarkusio/quarkus/pull/13543#issuecomment-735955489)
-          # - forces build of resteasy-reactive (see https://github.com/quarkusio/quarkus/pull/13243#issuecomment-735433991)
-          GIB_ARGS="-Dincremental -Dgib.disableSelectedProjectsHandling -Dgib.untracked=false -Dgib.uncommitted=false"
+          # - skip-bom-descriptor-json: avoids execution of too many integration-tests (which all dependend on the descriptor)
+          GIB_ARGS="-Dincremental -Dgib.disableSelectedProjectsHandling -Dgib.untracked=false -Dgib.uncommitted=false -Dskip-bom-descriptor-json"
           if [ -n "$PULL_REQUEST_BASE" ]
           then
               # The PR defines a clear merge target so just use that branch for reference, *unless*

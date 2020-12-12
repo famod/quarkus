@@ -22,11 +22,27 @@
     <modules>
         <module>platform-descriptor-json-plugin</module>
         <module>platform-properties</module>
-        <module>bom-descriptor-json</module>
+        <!-- see profile for bom-descriptor-json -->
         <module>platform-descriptor-json</module>
         <module>maven</module>
         <module>gradle</module>
         <module>cli</module>
         <module>reflection-agent</module>
     </modules>
+
+    <profiles>
+        <!-- Module bom-descriptor-json can be disabled for incremental builds via -Dskip-bom-descriptor-json,
+             otherwise all integration-tests would run for e.g. only a small change in a single extension. -->
+        <profile>
+            <id>bom-descriptor-json</id>
+            <activation>
+                <property>
+                    <name>!skip-bom-descriptor-json</name>
+                </property>
+            </activation>
+            <modules>
+                <module>bom-descriptor-json</module>
+            </modules>
+        </profile>
+    </profiles>
 </project>
