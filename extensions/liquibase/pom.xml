@@ -18,4 +18,5 @@
         <module>runtime</module>
         <module>deployment</module>
     </modules>
+    <!-- foo! -->
 </project>
