@@ -90,8 +90,10 @@ jobs:
           # refresh cache every month to avoid unlimited growth
           key: q2maven-${{ steps.get-date.outputs.date }}
       - name: Build
+        # note: '-Pincremental -Dgib.disable' shall only trigger the download of gitflow-incremental-builder, not activate it
+        #       since -Dincremental deactivates dependencies in bom-descriptor-json (which we do need here), -P is used instead
         run: |
-          mvn -T1C -e -B -DskipTests -DskipITs -Dinvoker.skip -Dno-format -Dtcks -Dincremental -Dgib.disable --settings .github/mvn-settings.xml clean install
+          mvn -T1C -e -B -DskipTests -DskipITs -Dinvoker.skip -Dno-format -Dtcks -Pincremental -Dgib.disable --settings .github/mvn-settings.xml clean install
       - name: Verify extension dependencies
         shell: bash
         run: |
@@ -119,10 +121,9 @@ jobs:
         run: |
           # See also: https://github.com/vackosar/gitflow-incremental-builder#configuration
           # Common GIB_ARGS for all CI cases (hint: see also pom.xml):
-          # - no-bom-descriptor-json-deps: disables minimal extension dependencies of bom-descriptor-json to avoid running all ITs most of the time
           # - disableSelectedProjectsHandling: required to detect changes in jobs that use -pl
           # - untracked: to ignore files created by jobs (and uncommitted to be consistent)
-          GIB_ARGS="-Dincremental -Dno-bom-descriptor-json-deps -Dgib.disableSelectedProjectsHandling -Dgib.untracked=false -Dgib.uncommitted=false"
+          GIB_ARGS="-Dincremental -Dgib.disableSelectedProjectsHandling -Dgib.untracked=false -Dgib.uncommitted=false"
           if [ -n "$PULL_REQUEST_BASE" ]
           then
               # The PR defines a clear merge target so just use that branch for reference, *unless*

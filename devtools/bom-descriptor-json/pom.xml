@@ -43,7 +43,7 @@
             <id>bom-descriptor-json-deps</id>
             <activation>
                 <property>
-                    <name>!no-bom-descriptor-json-deps</name>
+                    <name>!incremental</name>
                 </property>
             </activation>
             <dependencies>
