@@ -13,6 +13,10 @@
     <packaging>pom</packaging>
     <name>Quarkus - BOM - Descriptor JSON</name>
 
+    <properties>
+        <pluginPhase>process-resources</pluginPhase>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -21,7 +25,7 @@
                 <version>${project.version}</version>
                 <executions>
                     <execution>
-                        <phase>process-resources</phase>
+                        <phase>${pluginPhase}</phase>
                         <goals>
                             <goal>generate-extensions-json</goal>
                         </goals>
@@ -39,6 +43,18 @@
     </build>
 
     <profiles>
+        <profile>
+            <id>hollow</id>
+            <activation>
+                <property>
+                    <name>incremental</name>
+                </property>
+            </activation>
+            <properties>
+                <pluginPhase>none</pluginPhase>
+                <maven.install.skip>true</maven.install.skip>
+            </properties>
+        </profile>
         <profile>
             <id>bom-descriptor-json-deps</id>
             <activation>
