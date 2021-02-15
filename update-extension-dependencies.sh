@@ -52,7 +52,8 @@ DEPS_DEPLOYMENT=`echo "${ARTIFACT_IDS}" \
 
 MARK_START='<!-- START update-extension-dependencies.sh -->'
 MARK_END='<!-- END update-extension-dependencies.sh -->'
-SED_EXPR_DEPS_RUNTIME="/${MARK_START}/,/${MARK_END}/c\        ${MARK_START}\n${DEPS_RUNTIME}\n        ${MARK_END}"
+# note: more indetation here since bom-descriptor-json has a profile for the deps
+SED_EXPR_DEPS_RUNTIME="/${MARK_START}/,/${MARK_END}/c\                ${MARK_START}\n${DEPS_RUNTIME}\n                ${MARK_END}"
 SED_EXPR_DEPS_DEPLOYMENT="/${MARK_START}/,/${MARK_END}/c\        ${MARK_START}\n${DEPS_DEPLOYMENT}\n        ${MARK_END}"
 
 echo ''

@@ -13,9 +13,42 @@
     <packaging>pom</packaging>
     <name>Quarkus - BOM - Descriptor JSON</name>
 
-    <dependencies>
-        <!-- Minimal test dependencies for consistent build order -->
-        <!-- START update-extension-dependencies.sh -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-platform-descriptor-json-plugin</artifactId>
+                <version>${project.version}</version>
+                <executions>
+                    <execution>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>generate-extensions-json</goal>
+                        </goals>
+                        <configuration>
+                            <ignoredGroupIds>
+                                <ignoredGroupId>software.amazon.awssdk</ignoredGroupId>
+                            </ignoredGroupIds>
+                            <bomArtifactId>quarkus-bom</bomArtifactId>
+                            <resolveDependencyManagement>true</resolveDependencyManagement>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>bom-descriptor-json-deps</id>
+            <activation>
+                <property>
+                    <name>!no-bom-descriptor-json-deps</name>
+                </property>
+            </activation>
+            <dependencies>
+                <!-- Minimal test dependencies for consistent build order -->
+                <!-- START update-extension-dependencies.sh -->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-agroal</artifactId>
@@ -2382,33 +2415,9 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- END update-extension-dependencies.sh -->
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>io.quarkus</groupId>
-                <artifactId>quarkus-platform-descriptor-json-plugin</artifactId>
-                <version>${project.version}</version>
-                <executions>
-                    <execution>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>generate-extensions-json</goal>
-                        </goals>
-                        <configuration>
-                            <ignoredGroupIds>
-                                <ignoredGroupId>software.amazon.awssdk</ignoredGroupId>
-                            </ignoredGroupIds>
-                            <bomArtifactId>quarkus-bom</bomArtifactId>
-                            <resolveDependencyManagement>true</resolveDependencyManagement>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-
+                <!-- END update-extension-dependencies.sh -->
+            </dependencies>
+        </profile>
+    </profiles>
 
 </project>
