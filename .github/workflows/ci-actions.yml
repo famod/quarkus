@@ -196,14 +196,13 @@ jobs:
       MAVEN_OPTS: -Xmx1408m  -XX:MaxMetaspaceSize=1000m
 
     steps:
-      - name: Who
-        run: whoami
-      - name: WinDefend1
-        run: sc query WinDefend
-      - name: WinDefend2
-        run: sc stop WinDefend
-      - name: WinDefend3
-        run: sc query WinDefend
+      - name: Disable Defender
+        run: |
+          Set-MpPreference -DisableRealtimeMonitoring $true -Verbose
+          Set-MpPreference -DisableIOAVProtection $true -Verbose
+          Set-MpPreference -DisableBehaviorMonitoring $true -Verbose
+          Set-MpPreference -DisableIntrusionPreventionSystem $true -Verbose
+          Set-MpPreference -DisablePrivacyMode $true -Verbose
       - uses: actions/checkout@v2
       - name: Set up JDK 11
         # Uses sha for added security since tags can be updated
