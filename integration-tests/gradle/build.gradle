@@ -64,6 +64,11 @@ test {
     }
     // Native Build test are run in an other task
     exclude 'io/quarkus/gradle/nativeimage/*.class'
+
+    reports {
+        // https://github.com/ScaCap/action-surefire-report#tips-for-gradle
+        junitXml.enabled = true
+    }
 }
 
 task nativeTest(type: Test) {
