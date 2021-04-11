@@ -45,15 +45,14 @@
         <jakarta.websocket-api.version>1.1.2</jakarta.websocket-api.version>
         <junit.version>5.7.1</junit.version>
         <commons-compress.version>1.20</commons-compress.version>
-        <jboss-logging.version>3.3.2.Final</jboss-logging.version>
+        <jboss-logging.version>3.4.1.Final</jboss-logging.version>
         <maven-core.version>3.6.3</maven-core.version>
-        <mockito.version>3.8.0</mockito.version>
+        <mockito.version>3.9.0</mockito.version>
         <version.surefire.plugin>3.0.0-M5</version.surefire.plugin>
         <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
         <quarkus.version>999-SNAPSHOT</quarkus.version>
         <maven-model-helper.version>18</maven-model-helper.version>
         <commons-io.version>2.8.0</commons-io.version>
-        <quarkus-http.version>3.0.18.Final</quarkus-http.version>
         <smallrye-commons.version>1.5.0</smallrye-commons.version>
     </properties>
     <modules>
@@ -62,6 +61,7 @@
         <module>message-writer</module>
         <module>devtools-testing</module>
         <module>codestarts</module>
+        <module>base-codestarts</module>
         <module>devtools-common</module>
         <module>utilities</module>
     </modules>
@@ -70,6 +70,11 @@
             <dependency>
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-devtools-artifact-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-devtools-base-codestarts</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -94,7 +99,7 @@
             </dependency>
             <dependency>
                 <groupId>io.quarkus.qute</groupId>
-                <artifactId>qute-generator</artifactId>
+                <artifactId>qute-core</artifactId>
                 <version>${quarkus.version}</version>
             </dependency>
             <dependency>
@@ -116,17 +121,6 @@
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-devtools-common</artifactId>
                 <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.quarkus.http</groupId>
-                <artifactId>quarkus-http-websockets-jsr</artifactId>
-                <version>${quarkus-http.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.jboss.spec.javax.annotation</groupId>
-                        <artifactId>jboss-annotations-api_1.2_spec</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>jline</groupId>
@@ -162,16 +156,6 @@
                 <groupId>jakarta.enterprise</groupId>
                 <artifactId>jakarta.enterprise.cdi-api</artifactId>
                 <version>${jakarta.enterprise.cdi-api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.servlet</groupId>
-                <artifactId>jakarta.servlet-api</artifactId>
-                <version>${jakarta.servlet-api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.websocket</groupId>
-                <artifactId>jakarta.websocket-api</artifactId>
-                <version>${jakarta.websocket-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven</groupId>
@@ -336,7 +320,7 @@
             <plugin>
                 <groupId>net.revelc.code.formatter</groupId>
                 <artifactId>formatter-maven-plugin</artifactId>
-                <version>2.14.0</version>
+                <version>2.15.0</version>
                 <dependencies>
                     <dependency>
                         <artifactId>quarkus-ide-config</artifactId>
