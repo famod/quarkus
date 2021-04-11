@@ -18,41 +18,42 @@
         <bouncycastle.fips.version>1.0.2</bouncycastle.fips.version>
         <bouncycastle.tls.fips.version>1.0.11</bouncycastle.tls.fips.version>
         <jandex.version>2.2.3.Final</jandex.version>
-        <resteasy.version>4.5.9.Final</resteasy.version>
-        <opentracing.version>0.31.0</opentracing.version>
-        <opentracing-jaxrs.version>0.4.1</opentracing-jaxrs.version>
-        <opentracing-web-servlet-filter.version>0.2.3</opentracing-web-servlet-filter.version>
+        <resteasy.version>4.6.0.Final</resteasy.version>
+        <opentracing.version>0.33.0</opentracing.version>
+        <opentracing-jaxrs.version>1.0.0</opentracing-jaxrs.version>
+        <opentracing-web-servlet-filter.version>0.4.0</opentracing-web-servlet-filter.version>
         <opentracing-tracerresolver.version>0.1.8</opentracing-tracerresolver.version>
-        <opentracing-concurrent.version>0.2.0</opentracing-concurrent.version>
-        <opentracing-jdbc.version>0.0.12</opentracing-jdbc.version>
+        <opentracing-concurrent.version>0.4.0</opentracing-concurrent.version>
+        <opentracing-jdbc.version>0.2.12</opentracing-jdbc.version>
         <opentracing-kafka.version>0.1.15</opentracing-kafka.version>
+        <opentracing-mongo.version>0.1.5</opentracing-mongo.version>
         <opentelemetry.version>1.0.1</opentelemetry.version>
         <opentelemetry-alpha.version>1.0.1-alpha</opentelemetry-alpha.version>
-        <jaeger.version>0.34.3</jaeger.version>
-        <quarkus-http.version>3.1.0.Beta2</quarkus-http.version>
+        <jaeger.version>1.4.0</jaeger.version>
+        <quarkus-http.version>4.0.0.Alpha4</quarkus-http.version>
         <jboss-servlet-api_4.0_spec.version>1.0.0.Final</jboss-servlet-api_4.0_spec.version>
         <micrometer.version>1.6.5</micrometer.version> <!-- when updating, verify if com.google.auth should not be updated too -->
         <google-auth.version>0.22.0</google-auth.version>
-        <microprofile-config-api.version>1.4</microprofile-config-api.version>
-        <microprofile-metrics-api.version>2.3</microprofile-metrics-api.version>
+        <microprofile-config-api.version>2.0</microprofile-config-api.version>
+        <microprofile-metrics-api.version>3.0</microprofile-metrics-api.version>
         <microprofile-context-propagation.version>1.0.1</microprofile-context-propagation.version>
-        <microprofile-opentracing-api.version>1.3.3</microprofile-opentracing-api.version>
+        <microprofile-opentracing-api.version>2.0</microprofile-opentracing-api.version>
         <microprofile-reactive-streams-operators.version>1.0.1</microprofile-reactive-streams-operators.version>
-        <microprofile-rest-client.version>1.4.1</microprofile-rest-client.version>
-        <microprofile-jwt.version>1.1.1</microprofile-jwt.version>
+        <microprofile-rest-client.version>2.0</microprofile-rest-client.version>
+        <microprofile-jwt.version>1.2</microprofile-jwt.version>
         <smallrye-common.version>1.6.0</smallrye-common.version>
-        <smallrye-config.version>1.12.0</smallrye-config.version>
-        <smallrye-health.version>2.2.6</smallrye-health.version>
-        <smallrye-metrics.version>2.4.6</smallrye-metrics.version>
-        <smallrye-open-api.version>2.0.26</smallrye-open-api.version>
-        <smallrye-graphql.version>1.0.26</smallrye-graphql.version>
-        <smallrye-opentracing.version>1.3.5</smallrye-opentracing.version>
-        <smallrye-fault-tolerance.version>4.3.2</smallrye-fault-tolerance.version>
-        <smallrye-jwt.version>2.4.4</smallrye-jwt.version>
+        <smallrye-config.version>2.2.0</smallrye-config.version>
+        <smallrye-health.version>3.0.1</smallrye-health.version>
+        <smallrye-metrics.version>3.0.1</smallrye-metrics.version>
+        <smallrye-open-api.version>2.1.2</smallrye-open-api.version>
+        <smallrye-graphql.version>1.1.0</smallrye-graphql.version>
+        <smallrye-opentracing.version>2.0.0</smallrye-opentracing.version>
+        <smallrye-fault-tolerance.version>5.0.0</smallrye-fault-tolerance.version>
+        <smallrye-jwt.version>3.1.0</smallrye-jwt.version>
         <smallrye-context-propagation.version>1.1.0</smallrye-context-propagation.version>
         <smallrye-reactive-streams-operators.version>1.0.13</smallrye-reactive-streams-operators.version>
-        <smallrye-reactive-utils.version>1.5.0</smallrye-reactive-utils.version>
-        <smallrye-reactive-messaging.version>2.9.0</smallrye-reactive-messaging.version>
+        <smallrye-reactive-utils.version>2.3.0</smallrye-reactive-utils.version>
+        <smallrye-reactive-messaging.version>3.1.0</smallrye-reactive-messaging.version>
         <jakarta.activation.version>1.2.1</jakarta.activation.version>
         <jakarta.annotation-api.version>1.3.5</jakarta.annotation-api.version>
         <jakarta.el-impl.version>3.0.3</jakarta.el-impl.version>
@@ -90,21 +91,21 @@
         <jackson.version>2.12.2</jackson.version>
         <commons-logging-jboss-logging.version>1.0.0.Final</commons-logging-jboss-logging.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
-        <commons-codec.version>1.14</commons-codec.version>
+        <commons-codec.version>1.15</commons-codec.version>
         <classmate.version>1.5.1</classmate.version>
         <hibernate-orm.version>5.4.30.Final</hibernate-orm.version>
-        <hibernate-reactive.version>1.0.0.CR1</hibernate-reactive.version>
+        <hibernate-reactive.version>1.0.0.CR1.Vertx4</hibernate-reactive.version>
         <hibernate-validator.version>6.2.0.Final</hibernate-validator.version>
         <hibernate-search.version>6.0.2.Final</hibernate-search.version>
-        <narayana.version>5.10.6.Final</narayana.version>
+        <narayana.version>5.11.0.Final</narayana.version>
         <jboss-transaction-api_1.2_spec.version>1.1.1.Final</jboss-transaction-api_1.2_spec.version>
-        <agroal.version>1.10</agroal.version>
+        <agroal.version>1.11</agroal.version>
         <jboss-transaction-spi.version>7.6.0.Final</jboss-transaction-spi.version>
         <elasticsearch-rest-client.version>7.10.0</elasticsearch-rest-client.version>
         <rxjava1.version>1.3.8</rxjava1.version>
         <rxjava.version>2.2.21</rxjava.version>
         <wildfly.openssl.version>1.0.6.Final</wildfly.openssl.version>
-        <jboss-logging-annotations.version>2.2.0.Final</jboss-logging-annotations.version>
+        <jboss-logging-annotations.version>2.2.1.Final</jboss-logging-annotations.version>
         <slf4j.version>1.7.30</slf4j.version>
         <slf4j-jboss-logmanager.version>1.1.0.Final</slf4j-jboss-logmanager.version>
         <wildfly-common.version>1.5.4.Final-format-001</wildfly-common.version>
@@ -112,17 +113,18 @@
         <wildfly-elytron.version>1.15.3.Final</wildfly-elytron.version>
         <jboss-modules.version>1.8.7.Final</jboss-modules.version>
         <jboss-threads.version>3.2.0.Final</jboss-threads.version>
-        <vertx.version>3.9.6</vertx.version>
+        <vertx.version>4.0.3</vertx.version>
         <httpclient.version>4.5.13</httpclient.version>
         <httpcore.version>4.4.14</httpcore.version>
         <httpasync.version>4.1.4</httpasync.version>
-        <cronutils.version>9.1.3</cronutils.version>
+        <cronutils.version>9.1.5</cronutils.version>
         <quartz.version>2.3.2</quartz.version>
         <h2.version>1.4.197</h2.version>  <!-- keep 1.4.197 as newer versions have severe regressions -->
         <postgresql-jdbc.version>42.2.19</postgresql-jdbc.version>
         <mariadb-jdbc.version>2.7.2</mariadb-jdbc.version>
         <mysql-jdbc.version>8.0.23</mysql-jdbc.version>
         <mssql-jdbc.version>7.2.2.jre8</mssql-jdbc.version>
+        <oracle-jdbc.version>21.1.0.0</oracle-jdbc.version>
         <derby-jdbc.version>10.14.2.0</derby-jdbc.version>
         <db2-jdbc.version>11.5.5.0</db2-jdbc.version>
         <shrinkwrap.version>1.2.6</shrinkwrap.version>
@@ -134,23 +136,24 @@
         <infinispan.version>12.0.1.Final</infinispan.version>
         <infinispan.protostream.version>4.4.0.Alpha4</infinispan.protostream.version>
         <caffeine.version>2.9.0</caffeine.version>
-        <netty.version>4.1.49.Final</netty.version>
+        <netty.version>4.1.60.Final</netty.version>
         <reactive-streams.version>1.0.3</reactive-streams.version>
         <jboss-logging.version>3.4.1.Final</jboss-logging.version>
-        <mutiny.version>0.14.0</mutiny.version>
+        <mutiny.version>0.15.0</mutiny.version>
+        <mutiny-vertx.version>2.3.0</mutiny-vertx.version>
         <kafka2.version>2.7.0</kafka2.version>
         <zookeeper.version>3.5.7</zookeeper.version>
         <!-- Scala is used by Kafka so we need to choose a compatible version -->
         <scala.version>2.12.13</scala.version>
-        <tika.version>1.24.1</tika.version>
+        <tika.version>1.26</tika.version>
         <ooxml-schemas.version>1.4</ooxml-schemas.version>
         <aws-lambda-java.version>1.2.1</aws-lambda-java.version>
         <aws-lambda-java-events.version>3.8.0</aws-lambda-java-events.version>
         <aws-lambda-serverless-java-container.version>1.3.1</aws-lambda-serverless-java-container.version>
         <aws-xray.version>2.8.0</aws-xray.version>
-        <awssdk.version>2.16.29</awssdk.version>
-        <aws-alexa-sdk.version>2.37.1</aws-alexa-sdk.version>
-        <azure-functions-java-library.version>1.4.0</azure-functions-java-library.version>
+        <awssdk.version>2.16.36</awssdk.version>
+        <aws-alexa-sdk.version>2.38.1</aws-alexa-sdk.version>
+        <azure-functions-java-library.version>1.4.2</azure-functions-java-library.version>
         <kotlin.version>1.4.32</kotlin.version>
         <dekorate.version>2.1.1</dekorate.version>
         <maven-artifact-transfer.version>0.10.0</maven-artifact-transfer.version>
@@ -159,13 +162,13 @@
         <jprocesses.version>1.6.5</jprocesses.version>
         <jboss-logmanager.version>1.0.9</jboss-logmanager.version>
         <jgit.version>5.11.0.202103091610-r</jgit.version>
-        <flyway.version>7.7.1</flyway.version>
+        <flyway.version>7.7.3</flyway.version>
         <yasson.version>1.0.9</yasson.version>
         <liquibase.version>4.3.2</liquibase.version>
         <snakeyaml.version>1.28</snakeyaml.version>
         <osgi.version>6.0.0</osgi.version>
         <neo4j-java-driver.version>4.2.4</neo4j-java-driver.version>
-        <mongo-client.version>4.2.2</mongo-client.version>
+        <mongo-client.version>4.2.3</mongo-client.version>
         <mongo-crypt.version>1.2.0</mongo-crypt.version>
         <artemis.version>2.17.0</artemis.version>
         <proton-j.version>0.33.8</proton-j.version>
@@ -173,14 +176,14 @@
         <sentry.version>4.3.0</sentry.version>
         <subethasmtp.version>3.1.7</subethasmtp.version>
         <hibernate-quarkus-local-cache.version>0.1.0</hibernate-quarkus-local-cache.version>
-        <kubernetes-client.version>5.2.1</kubernetes-client.version>
+        <kubernetes-client.version>5.3.0</kubernetes-client.version>
         <flapdoodle.mongo.version>2.2.0</flapdoodle.mongo.version>
         <quarkus-spring-api.version>5.2.SP4</quarkus-spring-api.version>
         <quarkus-spring-data-api.version>2.1.SP2</quarkus-spring-data-api.version>
         <quarkus-spring-security-api.version>5.2.Final</quarkus-spring-security-api.version>
         <quarkus-spring-boot-api.version>2.1.SP1</quarkus-spring-boot-api.version>
         <htmlunit.version>2.40.0</htmlunit.version>
-        <mockito.version>3.8.0</mockito.version>
+        <mockito.version>3.9.0</mockito.version>
         <jna.version>5.3.1</jna.version><!-- should satisfy both testcontainers and mongodb -->
         <antlr.version>4.8</antlr.version>
         <quarkus-security.version>1.1.4.Final</quarkus-security.version>
@@ -194,11 +197,10 @@
         <google-http-client.version>1.38.0</google-http-client.version>
         <scram-client.version>2.1</scram-client.version>
         <!-- Make sure to check compatibility between these 2 gRPC components before upgrade -->
-        <grpc.version>1.34.0</grpc.version> <!-- when updating, verify if com.google.auth should not be updated too -->
+        <grpc.version>1.37.0</grpc.version> <!-- when updating, verify if com.google.auth should not be updated too -->
         <grpc-jprotoc.version>1.0.1</grpc-jprotoc.version>
         <protobuf-java.version>3.14.0</protobuf-java.version>
         <protoc.version>${protobuf-java.version}</protoc.version>
-
         <picocli.version>4.6.1</picocli.version>
         <org.eclipse.sisu.inject.version>0.3.4</org.eclipse.sisu.inject.version>
         <google-cloud-functions.version>1.0.1</google-cloud-functions.version>
@@ -1041,6 +1043,16 @@
             <dependency>
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-jdbc-mysql-deployment</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-jdbc-oracle</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-jdbc-oracle-deployment</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -1921,12 +1933,12 @@
             </dependency>
             <dependency>
                 <groupId>io.quarkus</groupId>
-                <artifactId>quarkus-jaxrs-client</artifactId>
+                <artifactId>quarkus-jaxrs-client-reactive</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.quarkus</groupId>
-                <artifactId>quarkus-jaxrs-client-deployment</artifactId>
+                <artifactId>quarkus-jaxrs-client-reactive-deployment</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -2831,6 +2843,11 @@
                 <version>${opentracing-kafka.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.opentracing.contrib</groupId>
+                <artifactId>opentracing-mongo-common</artifactId>
+                <version>${opentracing-mongo.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.rest-assured</groupId>
                 <artifactId>rest-assured</artifactId>
                 <version>${rest-assured.version}</version>
@@ -2937,6 +2954,7 @@
             <dependency>
                 <groupId>org.apache.tika</groupId>
                 <artifactId>tika-parsers</artifactId>
+                <version>${tika.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>org.apache.cxf</groupId>
@@ -2946,8 +2964,19 @@
                         <groupId>commons-logging</groupId>
                         <artifactId>commons-logging</artifactId>
                     </exclusion>
+                    <exclusion>
+                        <groupId>javax.activation</groupId>
+                        <artifactId>activation</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>javax.activation</groupId>
+                        <artifactId>activation-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>javax.xml.bind</groupId>
+                        <artifactId>jaxb-api</artifactId>
+                    </exclusion>
                 </exclusions>
-                <version>${tika.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
@@ -3164,18 +3193,6 @@
                     <exclusion>
                         <groupId>org.eclipse.microprofile.config</groupId>
                         <artifactId>microprofile-config-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>io.smallrye</groupId>
-                        <artifactId>smallrye-config</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>javax</groupId>
-                        <artifactId>javaee-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.osgi</groupId>
-                        <artifactId>org.osgi.annotation.versioning</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
@@ -4234,6 +4251,11 @@
                 <version>${mssql-jdbc.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.oracle.database.jdbc</groupId>
+                <artifactId>ojdbc8</artifactId>
+                <version>${oracle-jdbc.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.elasticsearch.client</groupId>
                 <artifactId>elasticsearch-rest-client</artifactId>
                 <version>${elasticsearch-rest-client.version}</version>
@@ -4314,7 +4336,7 @@
             <dependency>
                 <groupId>io.smallrye.reactive</groupId>
                 <artifactId>smallrye-mutiny-vertx-core</artifactId>
-                <version>${smallrye-reactive-utils.version}</version>
+                <version>${mutiny-vertx.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>com.fasterxml.jackson.core</groupId>
@@ -4329,27 +4351,27 @@
             <dependency>
                 <groupId>io.smallrye.reactive</groupId>
                 <artifactId>smallrye-mutiny-vertx-web-client</artifactId>
-                <version>${smallrye-reactive-utils.version}</version>
+                <version>${mutiny-vertx.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.smallrye.reactive</groupId>
                 <artifactId>smallrye-mutiny-vertx-sql-client</artifactId>
-                <version>${smallrye-reactive-utils.version}</version>
+                <version>${mutiny-vertx.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.smallrye.reactive</groupId>
                 <artifactId>smallrye-mutiny-vertx-db2-client</artifactId>
-                <version>${smallrye-reactive-utils.version}</version>
+                <version>${mutiny-vertx.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.smallrye.reactive</groupId>
                 <artifactId>smallrye-mutiny-vertx-mysql-client</artifactId>
-                <version>${smallrye-reactive-utils.version}</version>
+                <version>${mutiny-vertx.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.smallrye.reactive</groupId>
                 <artifactId>smallrye-mutiny-vertx-pg-client</artifactId>
-                <version>${smallrye-reactive-utils.version}</version>
+                <version>${mutiny-vertx.version}</version>
             </dependency>
             <dependency>
                 <!-- Used by the Reactive PG Client -->
@@ -4360,12 +4382,12 @@
            <dependency>
                 <groupId>io.smallrye.reactive</groupId>
                 <artifactId>smallrye-mutiny-vertx-mail-client</artifactId>
-                <version>${smallrye-reactive-utils.version}</version>
+               <version>${mutiny-vertx.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.smallrye.reactive</groupId>
                 <artifactId>smallrye-mutiny-vertx-redis-client</artifactId>
-                <version>${smallrye-reactive-utils.version}</version>
+                <version>${mutiny-vertx.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.vertx</groupId>
@@ -4619,17 +4641,17 @@
             <dependency>
                 <groupId>io.smallrye.reactive</groupId>
                 <artifactId>smallrye-reactive-converter-api</artifactId>
-                <version>${smallrye-reactive-utils.version}</version>
+                <version>${mutiny-vertx.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.smallrye.reactive</groupId>
                 <artifactId>smallrye-reactive-converter-mutiny</artifactId>
-                <version>${smallrye-reactive-utils.version}</version>
+                <version>${mutiny-vertx.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.smallrye.reactive</groupId>
                 <artifactId>smallrye-reactive-converter-rxjava2</artifactId>
-                <version>${smallrye-reactive-utils.version}</version>
+                <version>${mutiny-vertx.version}</version>
             </dependency>
 
             <dependency>
@@ -5183,7 +5205,7 @@
             <plugin>
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-platform-bom-maven-plugin</artifactId>
-                <version>0.0.8</version>
+                <version>0.0.9</version>
                 <executions>
                     <execution>
                         <phase>process-resources</phase>
