@@ -99,5 +99,15 @@
                 <quarkus.native.enable-https-url-handler>true</quarkus.native.enable-https-url-handler>
             </properties>
         </profile>
+        <profile>
+            <id>jdk16-workarounds</id>
+            <activation>
+                <jdk>[16,)</jdk>
+            </activation>
+            <properties>
+                <!-- avoids IllegalAccessException "java.naming does not export com.sun.jndi.ldap" -->
+                <surefire.argLine.additional>--add-exports java.naming/com.sun.jndi.ldap=ALL-UNNAMED</surefire.argLine.additional>
+            </properties>
+        </profile>
     </profiles>
 </project>
