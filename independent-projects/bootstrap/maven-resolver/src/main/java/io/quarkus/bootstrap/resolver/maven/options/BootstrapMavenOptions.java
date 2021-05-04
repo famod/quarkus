@@ -134,7 +134,8 @@ public class BootstrapMavenOptions {
             return mvnLine;
         }
         final StringBuilder buf = new StringBuilder(mvnLine.length() + mvnOpts.length() + 1);
-        buf.append(mvnOpts);
+        // HACK, to be removed!!
+        buf.append(mvnOpts.replace("--add-opens java.base/java.util=ALL-UNNAMED", ""));
         if (!Character.isWhitespace(mvnLine.charAt(0))) {
             buf.append(' ');
         }
