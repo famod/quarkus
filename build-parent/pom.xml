@@ -617,6 +617,10 @@
                     <artifactId>revapi-maven-plugin</artifactId>
                     <version>${revapi-maven-plugin.version}</version>
                 </plugin>
+                <plugin>
+                    <artifactId>maven-invoker-plugin</artifactId>
+                    <version>3.2.2</version>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
