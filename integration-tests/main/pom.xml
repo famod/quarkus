@@ -676,8 +676,9 @@
                 <jdk>[16,)</jdk>
             </activation>
             <properties>
-                <!-- avoids ConversionException in XStream based tests -->
-                <surefire.argLine.additional>--add-opens java.base/java.util=ALL-UNNAMED</surefire.argLine.additional>
+                <!-- opens java.util avoids ConversionException in XStream based tests -->
+                <!-- opens java.lang.invoke avoids InaccessibleObjectException in RestClientTestCase#testFaultTolerance -->
+                <surefire.argLine.additional>--add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang.invoke=ALL-UNNAMED</surefire.argLine.additional>
             </properties>
         </profile>
     </profiles>
