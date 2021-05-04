@@ -669,6 +669,17 @@
                 </plugins>
             </build>
         </profile>
+
+        <profile>
+            <id>jdk16-workarounds</id>
+            <activation>
+                <jdk>[16,)</jdk>
+            </activation>
+            <properties>
+                <!-- avoids ConversionException in XStream based tests -->
+                <surefire.argLine.additional>--add-opens java.base/java.util=ALL-UNNAMED</surefire.argLine.additional>
+            </properties>
+        </profile>
     </profiles>
 
 </project>
