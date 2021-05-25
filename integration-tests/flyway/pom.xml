@@ -8,7 +8,7 @@
         <version>999-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+	    <!-- foo -->
     <artifactId>quarkus-integration-test-flyway</artifactId>
     <name>Quarkus - Integration Tests - Flyway</name>
     <description>Module that contains Flyway related tests</description>
