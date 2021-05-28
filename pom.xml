@@ -57,7 +57,7 @@
         <postgres.url>jdbc:postgresql:hibernate_orm_test</postgres.url>
 
         <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
-        <gitflow-incremental-builder.version>3.14.1</gitflow-incremental-builder.version>
+        <gitflow-incremental-builder.version>3.14.2-20210527.213743-1</gitflow-incremental-builder.version>
         <quarkus-platform-bom-plugin.version>0.0.10</quarkus-platform-bom-plugin.version>
 
         <skipDocs>false</skipDocs>
@@ -112,6 +112,18 @@
             </snapshots>
         </repository>
     </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>sonatype snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
 
     <distributionManagement>
         <snapshotRepository>
