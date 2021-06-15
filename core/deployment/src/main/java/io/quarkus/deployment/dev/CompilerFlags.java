@@ -51,6 +51,8 @@ public class CompilerFlags {
         if (targetJavaVersion != null) {
             flagList.add("-target");
             flagList.add(targetJavaVersion);
+            flagList.add("-release");
+            flagList.add(targetJavaVersion);
         }
 
         flagList.addAll(userFlags);
