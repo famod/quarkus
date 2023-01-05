@@ -56,6 +56,7 @@ import io.quarkus.runtime.ResourceHelper;
 import io.quarkus.runtime.graal.ResourcesFeature;
 import io.quarkus.runtime.graal.WeakReflection;
 
+// foo
 public class NativeImageFeatureStep {
 
     public static final String GRAAL_FEATURE = "io.quarkus.runner.Feature";
@@ -823,5 +824,4 @@ public class NativeImageFeatureStep {
             this.serialization = serialization;
         }
     }
-
 }
